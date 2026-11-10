@@ -1,21 +1,24 @@
-# MediMochi
+<p align="center">
+  <img src="media/header.png" alt="TermMochi" width="100%">
+</p>
+
 A tiny medical knowledge buddy, powered by LLMs. Making healthcare technology easier to understand, one term at a time.
 
-MediMochi reads a PDF, finds the terms that belong to a field you choose (software in the medical field by default, but it can be finance, law, anything), looks up each term's meaning on the web, and saves everything with a source link to `terms.csv`.
+TermMochi reads a PDF, finds the terms that belong to a field you choose (software in the medical field by default, but it can be finance, law, anything), looks up each term's meaning on the web, and saves everything with a source link to `terms.csv`.
 
-![MediMochi demo: running the tool on a scanned PDF, with the cost warning, the cost estimate, the two confirmation questions and the final cost summary](media/demo.gif)
+![TermMochi demo: running the tool on a scanned PDF, with the cost warning, the cost estimate, the two confirmation questions and the final cost summary](media/demo.gif)
 
 *A real run on a scanned PDF: the cost warning, the estimate, the two `Continue? [y/N]` questions, the saved terms and the final cost summary.*
 
 > [!WARNING]
 > **⚠️ Scanned PDFs can be very expensive.**
-> If a PDF has no text (a scan, or photos of pages), MediMochi reads **every page as an image**. Image reading costs much more than text, and the cost grows with every page, so a long document can get costly fast. The tool shows a big red warning when this happens, and it always shows a cost estimate and asks you to confirm (`y` or `n`) before it sends anything to OpenAI. Check the page count first, and use a text version of the document whenever you can.
+> If a PDF has no text (a scan, or photos of pages), TermMochi reads **every page as an image**. Image reading costs much more than text, and the cost grows with every page, so a long document can get costly fast. The tool shows a big red warning when this happens, and it always shows a cost estimate and asks you to confirm (`y` or `n`) before it sends anything to OpenAI. Check the page count first, and use a text version of the document whenever you can.
 
 ## Why I built this
 
 When I read academic papers or technical documents outside my area of expertise, unfamiliar terminology keeps breaking my flow. I either forget what a term meant halfway through, or I stop reading to search for its definition.
 
-MediMochi fixes that up front. Before reading a document, I run it to extract the important terms and generate a CSV dictionary with explanations and sources. I skim the terms beforehand and come back to the dictionary whenever I need a refresher, so I spend less time looking things up and more time understanding what I'm reading.
+TermMochi fixes that up front. Before reading a document, I run it to extract the important terms and generate a CSV dictionary with explanations and sources. I skim the terms beforehand and come back to the dictionary whenever I need a refresher, so I spend less time looking things up and more time understanding what I'm reading.
 
 ## What it does
 
